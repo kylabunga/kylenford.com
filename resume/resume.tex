@@ -1,0 +1,102 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2011 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[14pt,letterpaper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                        % style options are 'casual' (default) and 'classic' 
+\definecolor{kylen}{HTML}{1C8509}
+\moderncvcolor{grey}                        % color options 'blue' (default), 'orange', 'kylen', 'red', 'purple', 'grey' and 'black'
+\definecolor{mycolor}{rgb}{255,255,255}   % color white
+\makeatletter                             % make @ a letter
+\renewcommand*{\section}[1]{%
+  \par\addvspace{2.5ex}%
+  \phantomsection{}% reset the anchor for hyperrefs
+  \addcontentsline{toc}{section}{#1}%
+  \parbox[t]{\hintscolumnwidth}{\strut\raggedleft\raisebox{\baseletterheight}{\color{mycolor}\rule{\hintscolumnwidth}{0.95ex}}}%
+  \hspace{\separatorcolumnwidth}%
+  \parbox[t]{\maincolumnwidth}{\strut\sectionstyle{#1}}%
+  \par\nobreak\addvspace{1ex}\@afterheading}% to avoid a pagebreak after the heading
+\makeatother
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+\usepackage[firstyear=2006,lastyear=2014]{moderntimeline}  
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\setlength{\hintscolumnwidth}{2.5cm}           % if you want to change the width of the column with the dates
+
+% personal data
+\firstname{Kyle}
+\familyname{Ford}
+\title{Résumé}    			           % optional, remove the line if not wanted
+%\address{293 Westwoods Ln}{Charles Town, WV 25414}    % optional, remove the line if not wanted
+\mobile{+1~304)~886~9919}                     % optional, remove the line if not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove the line if not wanted
+%\fax{+3~(456)~789~012}                        % optional, remove the line if not wanted
+\email{kford@kylenford.com}                 % optional, remove the line if not wanted
+\homepage{kylenford.com}                 % optional, remove the line if not wanted
+%\extrainfo{additional information}            % optional, remove the line if not wanted
+%\photo[64pt][0.4pt]{picture}                  % '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                     % to typeset your resume in Chinese using CJK
+\maketitle
+\vspace{-1cm}
+
+\section{Skills}
+\cvitem{Programming}{Javascript, HTML/CSS}
+\cvitem{Systems}{Windows, Mac OS X}
+\cvitem{Software}{Adobe Photoshop, Illustrator, InDesign, Final Cut, Microsoft Office, QuickBooks}
+\cvitem{Miscellaneous}{Proficiency in database research (JSTOR, EBSCOHost, etc..), written and spoken proficiency in Spanish}
+
+\section{Experience}
+\tlcventry[kylen]{2009}{2013}{Communications Consultant}{The Center for Writing \& Speaking, Agnes Scott College}{Decatur}{GA}{
+\begin{itemize}
+\item Tutored students on presentation and interview techniques in individual and group consultations.
+\item Led planning process and execution of events hosting up to 50 students.
+\item Taught students to use presentation software such as PowerPoint and Keynote.
+\item Delivered 20-40 minute presentations in freshmen classes on various components of oral communication.
+\item Coached both native and international students on pronunciation and other language skills.
+\end{itemize}}
+
+\tlcventry[kylen]{2010}{2011}{Legal Assistant}{Frank D. Hill, Attorney at Law}{Shepardstown}{WV}{
+\begin{itemize}
+\item Maintained organization of documents, mail, and appointments.
+\item Developed more efficient file naming and storage system.
+\item Wrote, dictated, and edited legal documents, employed resources such as legal archives and online databases.
+\end{itemize}}
+
+\section{Education}
+\tlcventry[kylen]{2009}{2013}{Bachelor of Arts in Political Science and Economics}{Agnes Scott College}{Decatur, GA}{GPA: 3.3}{}
+\cvitem{Awards}{Francis Winship Walters Scholarship, The Coca-Cola Foundation Scholarship, Bridge to Business Scholar, Global Awareness Scholar, International Economics Honor Society Member.}
+
+\section{Leadership and Volunteer Experience}
+\tlcventry[kylen]{2012}{2013}{Eco House Resident}{Agnes Scott College}{Decatur}{GA}{Developed and executed plan to create model for sustainable living in community. Constructed and maintained house-garden.}
+\tlcventry[kylen]{2011}{2013}{Founder and President}{Slacklining Club, Agnes Scott College}{Decatur}{GA}{Ran meetings, advertised, organized and, executed events. Led discussions and activities encouraging conscientious and innovative ways of engaging in campus life.}
+\tlcventry[kylen]{2006}{2011}{Kitchen Worker and Farmer}{Claymont Society}{Summit Point}{WV}{Completed agricultural projects on organic farm, working closely with WWOOFers. Led programs that introduced inner-city children to agricultural processes and sustainable lifestyles.}
+
+
+%\clearpage\end{CJK*}                         % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
