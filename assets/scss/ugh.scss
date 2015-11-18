@@ -8,26 +8,52 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    overflow: hidden;
     z-index: -1;
 }
 
 #home body {
     background: url(/assets/img/BackgroundSquiggles3.svg) no-repeat center center fixed;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 3;
+    font-size: 2.4vh;
 }
 
-#self-portrait {
+header { 
+    width: 100%;
+    height: 100%;
+    @include transition(0.4s);
+}
+
+#canvasName {
+    height: 100%;
+    width: 100%; 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+#self-portrait img {
     margin: 0 auto;
     width: 32%;
-    max-width: 700px;
+    max-width: 500px;
     min-width: 275px;
     display: block;
+    position: relative;
 }
 
-#name {
+#home #name img {
     margin: 8px auto;
     margin-bottom: 0;
     width: 24%;
     min-width: 225px;
+    position: relative;
 }
 
 /*NAVIGATION MENU*/
@@ -47,17 +73,19 @@ ul {
 
 nav > ul {
     margin: 0 auto;
+    @include transition(0.4s);
 }
 
 li {
     display: inline-block;
     margin-right: 10px;
+    @include transition(0.8s);
 }
 
 a {
     font-size: 230%;
     color: black;
-    font-family: 'Amatic SC', 'Futura', Helvetica;
+    font-family: 'Amatic SC', cursive;
 }
 
 a.active {
@@ -126,13 +154,14 @@ a.active {
     width: 100%;
     font-size: 1.5em;
     text-align: left;
+    background: url(/assets/img/BackgroundSquiggles.svg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     overflow: scroll;
+    z-index: -1;
 }
-
 #about header {
     display: table;
     position: fixed;
@@ -143,7 +172,6 @@ a.active {
     margin-left: 1%;
     padding: 0 1% 1em 2%;
     width: 25%;
-       position: relative;
 
 }
 #about #name img {
