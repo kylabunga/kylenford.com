@@ -7,121 +7,112 @@
         <meta name="description" content="Bio page">
         <meta name="author" content="Kylen Ford">
         <title>portfolio</title>
-        <link href="/assets/css/main.css" rel="stylesheet">
+
+
+       	<link href="/assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+       	        <link href="/assets/css/main.css" rel="stylesheet">
+
+       	<link href="/assets/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+       	<link href="/assets/css/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
+
         <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
 
-
-
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
 
     </head>
+
     <body>
 
         <header>
                 <h1>Portfolio</h1>
         </header>
 
+        <nav class="artwork">
+        	<a href="#illustration">illustration</a>
+
+        	<a href="#eventflyer">Event Flyers</a>
+        	
+        	<a href="#Logos--Type">Logos/Typography</a>
+        </nav>
+
         <main id="content" role="main">
 
             <div class="post-wrapper">
 
-                   <!-- <div class="grid js-isotope" data-isotope-options='{ "itemSelector": ".item", "layoutMode": "fitRows"}'>
+					<div class="gallery" data-featherlight-gallery data-featherlight-filter="a">
 
-                    	<div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">all</button>
-
-	                    	<button class="button" data-filter=".flyer">event flyers</button>
-
-	                    	 <button class="button" data-filter=".logo">logo/typography</button>
-
-	                    	 <button class="button" data-filter=".collage">digital collage</button>
-
-	                    	 <button class="button" data-filter=".fun">funsies</button>
-
-                    	 </div> -->
-                    	
-                    	<!-- example
-                    	 <button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button> -->
-	
-						<!--END OF BUTTONS-->
-						<div class="gallery">
-
-							<ul>
+							<ul class="flex" id="masonry"> 
 
 								<li>
-									<img src="/assets/img/Program.jpg" alt="">
+									<a href="/assets/img/Toor_flyer.jpg" data-featherlight="image"> 
+										<img src="/assets/img/Toor_flyer.jpg" alt="">
+									</a>
+								</li>
+
+
+								<li>
+									<a href="/assets/img/kominas.jpg" data-featherlight="image"> 
+										<img src="/assets/img/kominas.jpg" alt="Kominas show flyer">
+									</a>
 								</li>
 
 								<li>
-									<img src="/assets/img/Toor_flyer.jpg" alt="">
+									<a href="/assets/img/Program.jpg" data-featherlight="image" > 
+										<img src="/assets/img/Program.jpg" alt="" >
+									</a> 
 								</li>
 
 								<li>
-									<img src="/assets/img/kominas.jpg" alt="Kominas show flyer">
+									<a href="/assets/img/eye.jpg" data-featherlight="image"> 
+										<img src="/assets/img/eye.jpg" alt="Yonic Daze logo">
+									</a>
 								</li>
+
 								<li>
-									<img src="/assets/img/kefdreams_instagram.jpg" alt="Kef Dreams, event flyer sized for instagram">
+									<a href="/assets/img/kefdreams_instagram.jpg" data-featherlight="image"> 
+										<img src="/assets/img/kefdreams_instagram.jpg" alt="Kef Dreams, event flyer sized for instagram">
+									</a>
 								</li>
+
 								<li>
-									<img src="" alt="">
+									<a href="/assets/img/Summer Solstice Party.jpg" data-featherlight="image"> 
+								 		<img src="/assets/img/Summer Solstice Party.jpg" alt="">
+								 	</a>
 								</li>
-								<li>
-									<img src="/assets/img/eye.jpg" alt="Yonic Daze logo">
+
+
+							
+
+								<li id="frame">
+									<div>
+										<a href="http://oddcastles.com/odd-004/" data-featherlight="iframe">
+											<iframe src="http://oddcastles.com/odd-004/" frameborder="0" allowfullscreen="allowfullscreen" scrolling="no" ></iframe>
+										</a>
+										</div>
 								</li>
+
 							</ul>
-						</div>
-
-
-                    	 <!--  <div class="isotope">
-
-							  <div class="element-item flyer" data-category="flyer">
-							    <a href="">
-
-							    	<img src="/assets/img/kominas.jpg ">
-							    </a>
-							  </div>
-
-							  <div class="element-item flyer" data-category="flyer">
-							    <a href="">
-
-							    	<img src="/assets/img/kefdreams_instagram.jpg" alt="Kef Dreams, event flyer sized for instagram">
-							    </a>
-							 </div>
-
-							 <div class="element-item logo" data-category="logo">
-							    <a href="">
-
-							    	<img src="/assets/img/eye.jpg" alt="Yonic Daze logo">
-							    </a>
-							 </div>-->
-
-					    <!--  <div class="element-item logo" data-category="logo">
-							    <a href="">
-							    	<img src="/assets/img/kefdreams_instagram.jpg ">
-							    </a>
-							  </div>
-
-							  <div class="element-item collage" data-category="collage">
-							    <a href="">
-							    	<img src="assets/img/.jpg"> 
-							    </a>
-							  </div>
-
-						 	</div>-->
-
-                </div>
+							</div>
+					</div>
+                </div> 
             </div>
         </main>
 
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-        <script src="/assets/js/isotope.pkgd.min.js"></script>
-        <script src="/assets/js/portfolio.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script src="/assets/js/isotope.pkgd.min.js"></script> 
+
+        <script src="/assets/js/portfolio.js"></script> -->
+
+        <script src="/assets/js/jquery-1.7.0.min.js"></script>
+        <script src="/assets/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/assets/js/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="/assets/js/portfolio.js" type="text/javascript" charset="utf-8"></script>
+
 
     </body>
 </html>
