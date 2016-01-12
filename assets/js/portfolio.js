@@ -1,41 +1,38 @@
-// Create a lightbox
+jQuery(function($){
 
-var $lightbox = $("<div class='lightbox'></div>");
-var $img = $("<img>");
-var $caption = $("<p class='caption'></p>");
+    'use strict';
 
+    $('#gallery-slideshow').featherlightGallery({
+        filter: 'a',
+        afterContent: function() {
+            var $slideshow = this,
+                $gallery = $(this.$currentTarget).parents('#gallery-slideshow'),
+                $thumbs = $('> a', $gallery),
+                $navigation = this.$navigation || $('<div>', {class:'navigation'});
 
-// Add image and caption to lightbox
+            if (!this.$navigation) {
+                // Navigation
+                $thumbs.each(function(){
+                    var $thumb = $('<a>', {alt:$(this).attr('alt'), href:'#'});
+                    $thumb.on('click', function(e){
+                        e.preventDefault();
+                        $slideshow.navigateTo($(this).index());
+                    });
+                    $navigation.append($thumb);
+                });
+                $('a:eq(0)', $navigation).addClass('active');
+                this.$content.after($navigation);
+            }
 
-$lightbox
-  .append($img)
-  .append($caption);
+            this.$navigation = $navigation;
+        },
+        afterNavigateTo: function(index){
+            var $navigation = $('.navigation', this.$content.parent()),
+                $thumb = $('> a:eq('+index+')', $navigation);
+            $thumb.addClass('active');
+            $thumb.siblings().removeClass('active');
+        }
+    });
 
-// Add lighbox to document
-
-$('body').append($lightbox);
-
-
-$('.gallery li').click(function (e) {
-  e.preventDefault();
-
-  // Get image link and description
-  var src = $(this).children('img').attr("src");
-  var cap = $(this).children('img').attr("alt");
-
-  // Add data to lighbox
-
-  $img.attr('src',src);
-  $caption.text(cap);
-
-  // $lightbox.append('<img src="' + src + '"></img><p class="caption">' + caption + '</p>');
-
-  // Show lightbox
-
-  $lightbox.show();
-
-  $lightbox.click(function () {
-    $lightbox.hide();
-  });
 });
 
