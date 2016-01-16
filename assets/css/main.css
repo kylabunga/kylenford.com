@@ -1,4 +1,3 @@
-
 body {
   margin: 1% auto;
   font-size: 1.6em;
@@ -11,41 +10,14 @@ body {
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
-  text-rendering: optimizeLegibility;
-}
-
-#home body {
-  background: url(/assets/img/BackgroundSquiggles3.svg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-#self-portrait {
-  margin: 0 auto;
-  width: 29%;
-  max-width: 700px;
-  min-width: 275px;
-  display: block; }
- 
-#name {
-  margin: 8px auto;
-  margin-bottom: 0;
-  width: 24%;
-  min-width: 225px; }
-
-/*NAVIGATION MENU*/
+  text-rendering: optimizeLegibility;}
 
 ul {
   list-style: none;
-  padding: 0px; }
+  padding: 0px;}
 
-#home ul, #about ul {
-  position: absolute;
-  text-align: left;
-  left: 43.5%;
-  margin-top: -1.5em; }
+nav > ul {
+  margin: 0 auto;}
 
 li {
   display: inline-block;
@@ -60,8 +32,48 @@ a.active {
   text-decoration: underline;
   color: black; }
 
+h1 {
+  font-weight: normal;
+  font-size: 4em;
+  margin-bottom: 0;
+  font-family: 'Amatic SC', 'Yanone Kaffeesatz', sans-serif; }
+
+  h3 {
+  font-weight: bold;
+  font-size: 2em;}
+
+#home body {
+  background: url(/assets/img/BackgroundSquiggles3.svg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.self-portrait {
+  margin: 0 auto;
+  width: 29%;
+  max-width: 700px;
+  min-width: 275px;
+  display: block; }
+ 
+.name {
+  margin: 8px auto;
+  margin-bottom: 0;
+  width: 24%;
+  min-width: 225px; }
+
+/*NAVIGATION MENU*/
+
+#home ul, #about ul, .resume ul, .portfolio ul.menu{
+  position: absolute;
+  text-align: left;
+  left: 43.5%;
+  z-index: 2;
+  margin-top: -1.5em; }
+
 @media only screen and (max-width: 999px) {
-  #name img {
+  .name img {
     width: 28%; }
 
   #home ul {
@@ -84,12 +96,12 @@ a.active {
     padding: 0; } }
 
 @media only screen and (max-width: 400px) {
-  #self-portrait img {
+  .self-portrait img {
     width: 28%;
     max-width: 500px;
     min-width: 260px; }
 
-  #name img {
+  .name img {
     margin: 8px auto;
     margin-bottom: 0;
     width: 24%;
@@ -106,69 +118,55 @@ a.active {
 /* ----------- ABOUT ----------- */
 
 #about body {
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: scroll; }
 
-/*#about header {
-  display: table;
-  position: fixed; }
-
-#about #name {
-  display: table-cell;
-  text-align: center;
-  margin-left: 1%;
-  padding: 1% 1.5% 1% 2%;
-  width: 25%;
-  position: relative; }
-
-#about #name img {
+#alan img {
   width: 100%;
-  min-width: 225px; }
-
-#about #firstnav ul {
-  margin-top: 4%;
-  text-align: left;
-  display: table-cell;
-  width: 100px; }*/
-
+  height: 100%;
+  overflow: hidden; }
 
 /* ============================================================
-  PARALLAX SECTIONS 
+  PRIMARY STRUCTURE
 ============================================================ */
 
-section.module:last-child {
-  margin-bottom: 0; }
+#about .parallaxcontainer {
+  margin: 0 auto;
+}
+
+/* ============================================================
+  SECTIONS
+============================================================ */
 
 section.module h2 {
   margin-bottom: 40px;
-  font-family: "Roboto Slab", serif;
-  font-size: 30px; }
-
- section.module #handstand {
-  width: 35%;
-  float: left;
-  text-align: left;
-  margin-left: 7%; }
+  font-family: "Roboto Slab", serif;}
 
 section.module p {
+  padding: 3.5% 3% 0% 0%;
   font-size: 1.2em;
   font-weight: 300; 
-  margin: 20px;
-  text-align: justify;
-  padding: 3% 4% 0% 4%;
-  margin-right: 7%;}
+  text-align: justify;}
 
-section.module p a {
-  font-size: 1.5em; }
-
-section.module p:last-child {
-  margin-bottom: 0; }
+#about section.module a {
+    font-size: 190%;
+}
 
 section.module.content {
-  padding: 0% 2% 2% 2%; 
-  overflow: auto;
   width: 100%;
-  text-align: center;
-  }
+  padding: 0% 2% 2% 2%;
+  margin-bottom: 2%;
+  overflow: auto;
+  text-align: center;}
+
+#handstand {
+  margin: -1% 1% 0 3%;
+  width: 35%;
+  float: left;}
 
 section.module.parallax {
   height: 750px;
@@ -178,7 +176,7 @@ section.module.parallax {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;}
 
 section.module.parallax h1 {
   color: rgba(255, 255, 255, 0.8);
@@ -192,115 +190,83 @@ section.module.parallax-1 {
   background-image: url("/assets/img/Alan.jpg");
   z-index: 6; }
 
-/*section.module.parallax-2 {
-  background-image: url();
-}
-section.module.parallax-3 {
-  background-image: url();
-}*/
-@media only screen and (max-width: 999px) {
-  ul {
-    list-style: none;
-    padding: 0px; }
+/* ----------- MEDIA QUERIES ----------- */
 
-  #about ul {
+@media only screen and (max-width: 999px) {
+  #about .menu ul {
     position: absolute;
     text-align: left;
     left: 43.5%;
     margin-top: -1.5em; }
 
-  #about li {
+  #about .menu li {
     display: inline-block;
     margin-right: 10px; }
 
   #about a {
     font-size: 200%;
   }
+}
 
 @media only screen and (max-width: 600px) {
-   section.module #handstand {
-      display: none;
-    }
-
-/*    #about #name {
-      display: block;
-      text-align: center;
-      padding: 2% 0 0 0; 
+  #handstand {
       margin: 0 auto;
-      width: 25%;
-    }
-*/
+      float: none;
+      text-align: center;
+      width: 50%;}
+
+  #about .parallaxcontainer {
+      width: 100%;}
+
+  section.module p {
+    font-size: 1em; 
+    display: block;
+    padding: 0;}
+
     #about ul {
-      left: 39%;
-      position: relative; }
+        position: relative;
+        text-align: center;
+        left: 0;}
 
-/*    #about #firstnav ul li {
-      display: block;
-    }*/
-
-  #about a {
-    font-size: 180%;
+  section.module.parallax-1 {
+    display: none;
+  }
   }
 
-/*    #about section.module.content {
-      padding: 0;
-    }*/
 
-    #about section.module p {
-      margin: 0 auto;
-      font-size: 1.2em;
-      width: 100%;
-      padding: 0 5% 0 5%;
-      text-align: justify;
-    }
-}
+
 /* ----------- END ABOUT ----------- */
-
 
 /* ----------- RESUME ----------- */
 .resume body {
   width: 100%;
   margin: 0 auto;
   font-size: 1.5em;
-  text-align: left;
   background: url(/assets/img/BackgroundSquiggles.svg) no-repeat center center fixed;
   overflow: scroll;
   z-index: -1; }
 
-/*.resumeHeader li {
-	margin: 0 5%;
+.resume .name img {
+  text-align: center;
 }
 
+/*.resumeHeader li {
+  margin: 0 5%;
+}
 .resumeHeader ul {
-	margin-bottom: 0;
-	margin-top: 5px;
+  margin-bottom: 0;
+  margin-top: 5px;
 }>
-
 .resume hr {
-	margin-top: 3px;
+  margin-top: 3px;
 }*/
 #resume img {
   margin: 0 auto;
   width: 100%;
   max-width: 9in; }
 
-h1 {
-  font-weight: normal;
-  font-size: 4em;
-  margin-bottom: 0;
-  font-family: 'Amatic SC', 'Yanone Kaffeesatz', sans-serif; }
+/*
 
-.projects h2 a {
-  font-weight: lighter;
-  font-size: 2em;
-  font-family: 'Yanone Kaffeesatz', sans-serif; }
-
-h3 {
-  font-weight: bold;
-  font-size: 2em; }
-
-nav {
-  text-align: center; }
 
 .container {
   width: 100%;
@@ -345,9 +311,9 @@ nav {
 .experience ul li:first-child {
   list-style: none;
   padding: 0; }
-
+*/
 /*#content {
-	margin: 2%;
+  margin: 2%;
 }*/
 /* ----------- END RESUME ----------- */
 
@@ -380,23 +346,6 @@ nav {
   text-align: center; }
 
 .portfolio .gallery {
-/*  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;*/
-
-/*  -webkit-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;*/
-
-  /*-webkit-flex-flow: wrap;
-  -ms-flex-wrap: wrap;
-  fle/*x-flow: row wrap;
-
-  -webkit-justify-content: space-between;
-  justify-content: space-between;*/
-
   font-size: 0; 
   -webkit-column-count: 3;
   -ms-column-count:3;
@@ -408,8 +357,6 @@ nav {
   column-gap: 1.5em;
   font-size: .85em;
 }
-
-
 
 .gallery li {
   width: 100%; 
@@ -497,22 +444,6 @@ nav {
   }
 }
 
-#frame {
-    position: relative;
-    padding-bottom: 40%;
-    padding-top: 40%;
-}
-
-#frame iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-}
-
 @media screen and (max-width: 999px) {
   .portfolio .gallery {
       -webkit-column-count: 2;
@@ -531,4 +462,7 @@ nav {
 
 /* ----------- END PORTFOLIO ----------- */
 
-/*# sourceMappingURL=main.css.map */
+.projects h2 a {
+  font-weight: lighter;
+  font-size: 2em;
+  font-family: 'Yanone Kaffeesatz', sans-serif; }

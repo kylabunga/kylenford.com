@@ -36,7 +36,7 @@
 
 	.featherlight-next span,
 	.featherlight-previous span {
-		display:none;
+/*		display:none;*/
 		position:absolute;
 		top:50%;left:5%;
 		width:82%;
@@ -62,7 +62,7 @@
 
 	.featherlight-loading .featherlight-next,
 	.featherlight-loading .featherlight-previous {
-		display:none
+/*		display:none*/
 	}
 }
 

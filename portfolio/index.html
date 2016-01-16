@@ -25,11 +25,29 @@
     <body>
 
         <header>
+
+            <a href="/index.html">
+                <img class="name" src="/assets/img/nameTextforsiteRed.png" alt="Kylen Ford">
+            </a>
+
+            <nav role="navigation">
+
+                <ul class="menu">
+                     <li><a href="/about">about</a></li>
+
+                    <li><a href="/resume">r&eacute;sum&eacute;</a></li>
+                        
+                    <li><a href="/projects">misc. projects</a></li>
+
+                </ul>
+
+            </nav>
+
                 <h1>Portfolio</h1>
         </header>
 
-        <nav class="artwork">
-        	<a href="#Digital">Digital Illustration</a>
+<!--         <nav class="artwork">
+        	<a href="#Digital">Digital Illustration</a> -->
 
         	<!-- <a href="#eventflyer">Event Flyers</a>
 
@@ -64,6 +82,12 @@
 								</li>
 
 								<li>
+									<a href="/assets/img/yonicsite.png" data-featherlight="image"> 
+								 		<img src="/assets/img/yonicsite.png" alt="">
+								 	</a>
+								</li>
+
+								<li>
 									<a href="/assets/img/eye.jpg" data-featherlight="image"> 
 										<img src="/assets/img/eye.jpg" alt="Yonic Daze logo">
 									</a>
@@ -81,15 +105,16 @@
 								 	</a>
 								</li>
 
+								<li>
+									<a href="/assets/img/titles.jpg" data-featherlight="image"> 
+								 		<img src="/assets/img/titles.jpg" alt="">
+								 	</a>
+								</li>
 
-							
-
-								<li id="frame">
-									<div>
-										<a href="http://oddcastles.com/odd-004/" data-featherlight="iframe">
-											<iframe src="http://oddcastles.com/odd-004/" frameborder="0" allowfullscreen="allowfullscreen" scrolling="no" ></iframe>
-										</a>
-										</div>
+								<li>
+									<a href="/assets/img/Shakai.png" data-featherlight="image"> 
+								 		<img src="/assets/img/Shakai.png" alt="">
+								 	</a>
 								</li>
 
 							</ul>
@@ -110,6 +135,26 @@
         <script src="/assets/js/jquery-1.7.0.min.js"></script>
         <script src="/assets/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/assets/js/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+			$(document).ready(function(){
+				$('.gallery').featherlightGallery({
+					gallery: {
+						fadeIn: 300,
+						fadeOut: 300
+					},
+					openSpeed:    300,
+					closeSpeed:   300
+				});
+				$('.gallery2').featherlightGallery({
+					gallery: {
+						next: 'next »',
+						previous: '« previous'
+					},
+					variant: 'featherlight-gallery2'
+				});
+			});
+			</script>
 		
 		<script src="/assets/js/portfolio.js" type="text/javascript" charset="utf-8"></script>
 
